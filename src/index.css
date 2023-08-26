@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+font-family: 'Mulish', sans-serif;
+}
+
+@layer components {
+  .container {
+    @apply px-[10px] mx-auto;
+  }
+  .element-center {
+    @apply flex justify-center items-center;
+  }
+  .btn {
+    @apply bg-primary  hover:bg-opacity-70 transition-all duration-300 text-2xl min-w-[200px] py-2 rounded-2xl;
+  }
+  .input-form{
+    @apply shadow-inputshadow  h-[60px]  rounded-2xl  ps-16 relative
+  }
+     
+  
+  .input-field{
+    @apply placeholder:text-[rgba(184,184,184,1)] focus:placeholder:text-black transition-all duration-200 h-full
+     w-full placeholder:duration-200 placeholder:ease-in placeholder:transition-all ease-in focus:outline-none
+      outline-none text-xl font-normal text-[rgba(184,184,184,1)] focus:text-black
+      
+   
+  }
+
+  .otp-container{
+    @apply flex gap-4
+  }
+  .otp-container input{
+    @apply border-2 border-[rgba(237,235,233,1)] border-solid bg-[rgba(255,255,255,1)] !w-[50px] h-[50px] rounded-full outline-none
+     focus:border-[#cdb297] transition-all duration-300
+  }
+}
+
+.input-form .input-field:focus +img{
+  filter: invert(1);
+}
+
